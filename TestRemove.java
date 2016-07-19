@@ -13,10 +13,10 @@ public class TestRemove {
 
 	@Test
 	public void testMessageutil() {
-		Remove f=new Remove();
+		Remove_dupli f=new Remove_dupli();
 		int a[]={2,3,4,5,3,5,6,7};
 		int b[]={2,3,4,5,6,7};
-		assertArrayEquals(b,f.removeDuplicate(a));
+		assertArrayEquals(b,f.remove_dupli(a));
 		
 	}
 

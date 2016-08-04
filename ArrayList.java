@@ -1,27 +1,29 @@
 package Single;
 
 import java.util.Scanner;
+import java.util.Comparator;
+import java.util.NoSuchElementException;
 
-public class ArrayList {
-
-	int f = 0;
-	Object array[];
-	Object array2[];
-	 int count = 0;
+public class ArrayList<T> implements Comparable<T> {
 	int max = 8;
+	int f = 0;
+	T array[] = (T[]) new Object[max];
+	// <T> array2[];
+	int count = 0;
 
 	public ArrayList() {
-		array = new Object[max];
+
 	}
 
-	void add(Object data) {
+	void add(T data) {
 		int i = 0;
 		if (count > max - 1) {
 			/*
-			 * If list become overflow then increase it size so it works as arrayList
+			 * If list become overflow then increase it size so it works as
+			 * arrayList
 			 */
 			max = (max * 3 / 2) + 1;
-			array2 = new Object[max];
+			T array2[] = (T[]) new Object[max];
 			for (i = 0; i < count; i++) {
 
 				array2[i] = array[i];
@@ -49,14 +51,14 @@ public class ArrayList {
 
 	}
 
-	Boolean partiLoc(int loc, Object data) {
+	Boolean partiLoc(int loc, T data) {
 		int i = 0;
 
 		if (count == loc) {
 			if (max <= count) {
 
 				max = (max * 3 / 2) + 1;
-				array2 = new Object[max];
+				T array2[] = (T[]) new Object[max];
 				for (i = 0; i < count; i++) {
 
 					array2[i] = array[i];
@@ -77,7 +79,7 @@ public class ArrayList {
 			if (max <= count) {
 
 				max = (max * 3 / 2) + 1;
-				array2 = new Object[max];
+				T array2[] = (T[]) new Object[max];
 				for (i = 0; i < count; i++) {
 
 					array2[i] = array[i];
@@ -136,7 +138,7 @@ public class ArrayList {
 
 	void reverse() {
 		int i = 0;
-		Object c;
+		T c;
 		int j = count - 1;
 		while (i <= j) {
 			c = array[i];
@@ -148,26 +150,38 @@ public class ArrayList {
 		}
 	}
 
+	public int compareTo(T g) {
+		return this.compareTo(g);
+
+	}
+
+	@SuppressWarnings("unchecked")
 	void sort() {
-		Object c;
-		for (int i = 0; i < count; i++) {
-			for (int j = i + 1; j < count; j++) {
-				if (array[j].equals(array[j + 1])) {
+		T c;
+
+		int flag = 0;
+		for (int i = 0; i < count - 1; i++) {
+			for (int j = 0; j < count - 1; j++) {
+				flag = 0;
+				flag = ((Comparable<T>) array[j]).compareTo(array[j + 1]);
+				if (flag == 1) {
+
 					c = array[j];
 					array[j] = array[j + 1];
-					array[j + 1] = c;
+					array[j + 1] = (T) c;
+
 				}
 			}
-
 		}
+
 	}
 
 	int getSize() {
 		return count;
 	}
 
-	Object[] getElements() {
-		Object ob[] = new Object[count];
+	T[] getElements() {
+		T ob[] = (T[]) new Object[count];
 		for (int i = 0; i < count; i++) {
 			ob[i] = array[i];
 		}
@@ -175,7 +189,7 @@ public class ArrayList {
 	}
 
 	public static void main(String args[]) {
-		ArrayList a = new ArrayList();
+		ArrayList<Integer> a = new ArrayList<Integer>();
 
 		a.add(10);
 		a.add(20);
@@ -185,7 +199,7 @@ public class ArrayList {
 		a.add(60);
 		a.add(20);
 		a.add(80);
-        a.add(90);
+		a.add(90);
 		a.display();
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter position and item ");
@@ -227,6 +241,7 @@ public class ArrayList {
 		a.reverse();
 		a.display();
 		a.sort();
+		a.display();
 		a.clearList();
 	}
 }

@@ -1,49 +1,48 @@
 package data_struct;
 
-import java.util.LinkedList;
 import java.util.*;
 
 public class SortedLinkedList {
 
-	LinkedList l = new LinkedList();
-	int pos = 0;
+	LinkedList<Integer> list = new LinkedList();
+	int position = 0;
 
 	int addElementsSorted() {
 
-		l.add(10);
-		l.add(20);
-		l.add(30);
-		l.add(40);
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		list.add(40);
 
-		return l.size();
+		return list.size();
 	}
 /*
  * recursively check that where element is inserted in sorted linked list and then insert
  */
 	int addElement(int size, int data, int index) {
 		if (index >= size) {
-			pos = size;
-			l.add(pos, data);
+			position = size;
+			list.add(position, data);
 			return size;
 		} else {
-			int val = (int) l.get(index);
+			int val = (int) list.get(index);
 			if (val < data) {
 
 				addElement(size, data, index + 1);
 			} else {
 
-				pos = index;
-				l.add(pos, data);
+				position = index;
+				list.add(position, data);
 				return index;
 			}
 		}
-		return pos;
+		return position;
 	}
 /*
  * It will display all list 
  */
 	void displayList() {
-		Object ls[] = l.toArray();
+		Object ls[] = list.toArray();
 		for (int i = 0; i < ls.length; i++) {
 			System.out.println(ls[i]);
 		}

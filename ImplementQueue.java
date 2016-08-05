@@ -8,7 +8,7 @@ public class ImplementQueue {
 	public static void main(String args[])
 	{
 	
-	Queue<Integer>q=new Queue<Integer>();
+	Queue<Integer>queue=new Queue<Integer>();
 	String ch;
 	int choice=0;
 	
@@ -34,15 +34,15 @@ public class ImplementQueue {
 			switch(choice){
 			case 1:
 			System.out.println("Enter the element you want to enqueue in queue");
-			q.add(sc.nextInt());
+			queue.add(sc.nextInt());
 			break;
 			case 2:
-			int data=q.remove();
+			int data=queue.remove();
 			System.out.println(data+"is remove from list");
 			break;
 			
 			case 3:
-			 data=q.peek();
+			 data=queue.peek();
 			System.out.println("Element at front is"+data);
 			break;
 			

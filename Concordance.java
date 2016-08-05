@@ -6,26 +6,24 @@ public class Concordance {
 /*
  * HashMap should be maintain that will contain character and their position in string
  */
-	void calculateConcordance(String in) {
+	void calculateConcordance(String input) {
 		LinkedHashMap<String, List<Integer>> index = new LinkedHashMap<String, List<Integer>>();
-		int number = countNonRepeatString(in);
+		for (int i = 0; i < input.length(); i++) {
 
-		for (int i = 0; i < in.length(); i++) {
+			String ch = Character.toString(input.charAt(i));
 
-			String ch = Character.toString(in.charAt(i));
+			if (index.containsKey(Character.toString(input.charAt(i)))) {
 
-			if (index.containsKey(Character.toString(in.charAt(i)))) {
+				List<Integer> indexList = index.get(Character.toString(input.charAt(i)));
 
-				List l = index.get(Character.toString(in.charAt(i)));
+				indexList.add(i);
 
-				l.add(i);
-
-				index.put(ch, l);
+				index.put(ch, indexList);
 			} else {
 
-				List<Integer> l = new ArrayList<Integer>();
-				l.add(i);
-				index.put(ch, l);
+				List<Integer> indexList = new ArrayList<Integer>();
+				indexList.add(i);
+				index.put(ch, indexList);
 
 			}
 
@@ -46,7 +44,7 @@ public class Concordance {
 	}
 
 	public static void main(String args[]) {
-		Concordance c = new Concordance();
+		Concordance concordance = new Concordance();
 
 		System.out.println("Enter string");
 		Scanner sc = new Scanner(System.in);
@@ -60,6 +58,6 @@ public class Concordance {
 
 		}
 
-		c.calculateConcordance(input);
+		concordance.calculateConcordance(input);
 	}
 }

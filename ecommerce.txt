@@ -1,0 +1,67 @@
+Assignment3 
+1.CREATE DATABASE ecommerce;
+
+2.create table cateogry (cat_id INT PRIMARY KEY,cat_name VARCHAR(50),parentCat INT);
+    
+3.insert into cateogry values(1,'Mobiles & Tablets',null);
+  insert into cateogry values(4,'Mobiles',1);
+  insert into cateogry values(15,'Smart Phones',4);
+  insert into cateogry values(16,'Featured Phones',4);
+  insert into cateogry values(5,'Tablets',1);
+  insert into cateogry values(17,'2G',5);
+  insert into cateogry values(18,'3G',5);
+  insert into cateogry values(6,'Accessories',1);
+  insert into cateogry values(7,'Cases and covers',1);
+  insert into cateogry values(2,'Computers',null);
+  insert into cateogry values(8,'Desktop',2);
+  insert into cateogry values(9,'Laptop',2);
+  insert into cateogry values(10,'Laptop Accessories',2);
+  insert into cateogry values(19,'Keyboards',10);
+  insert into cateogry values(20,'Mouse',10);
+  insert into cateogry values(21,'Headphones',10);
+  insert into cateogry values(11,'Printers',2);
+  insert into cateogry values(22,'Inject',11);
+  insert into cateogry values(23,'Laser',11);
+  insert into cateogry values(3,'Home Appliances',null);
+  insert into cateogry values(12,'TVs',3);
+  insert into cateogry values(24,'LED',12);
+  insert into cateogry values(25,'LCD',12);
+  insert into cateogry values(26,'Plasma',12);
+  insert into cateogry values(13,'Air conditioners',3);
+  insert into cateogry values(14,'Washing Machine',3);
+  insert into cateogry values(27,'Full Automatic',14);
+  insert into cateogry values(29,'Top Load',27);
+  insert into cateogry values(30,'Front Load',27);
+  insert into cateogry values(28,'Semi Automatic',14);
+    
+    
+3.select cat1.cat_id ,cat1.cat_name,cat2.cat_name as 'PARENT'   from cateogry as cat1 LEFT JOIN cateogry as cat2 on   cat1.parentCat=cat2.cat_id;
+
+
+
+ 
+4.select cat1.cat_name 
+     , cat2.cat_name 
+
+  from cateogry as cat1
+left outer 
+  join cateogry as cat2 
+    on cat2.cat_id = cat1.parentCat
+order
+    by   cat2.cat_name ;
+
+
+5.select cat1.cat_name 
+     ,ifnull(cat2.cat_name , 'Top Cateogry') as Parent
+     
+  from cateogry as cat1
+left outer 
+  join cateogry as cat2 
+    on cat2.cat_id = cat1.parentCat
+
+order
+    by   cat1.cat_name ;  
+
+6.select cat1.cat_name from cateogry as cat1 where parentCat is NULL;
+
+7.select cat1.cat_name from cateogry as cat1 where parentCat is NULL order by cat1.cat_name;

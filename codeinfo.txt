@@ -1,0 +1,24 @@
+USE CODEINFO;
+create table state(stateId int primary key,statename varchar(20));
+create table city(cityid int primary key,cityname varchar(20),stateid int,FOREIGN KEY(stateid) REFERENCES state(stateid));
+create table area(zipcode int primary key,areaname varchar(20),cityid int,FOREIGN KEY(cityid) REFERENCES city(cityid));
+    
+insert into state values(101,'RAJ');
+insert into state values(102,'UP');
+insert into state values(103,'MP');
+insert into city values(1,'JAIPUR',101);
+insert into city values(2,'BHILWARA',101);
+insert into city values(3,'INDORE',103);
+insert into city values(4,'AGRA',102);
+
+insert into area values(302012,'JOTHWARA',1);
+insert into area values(302028,'KOOKAS',1);
+insert into area values(303801,'PRATAP',1);
+insert into area values(312454,'Dwarika coloiny',2);
+      
+          
+
+select area.zipcode,area.areaname,city.cityName,state.stateName from city INNER JOIN state on city.stateid=state.stateid 
+INNER JOIN area on city.cityID=area.cityID;
+
+

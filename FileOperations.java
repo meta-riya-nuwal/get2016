@@ -14,8 +14,10 @@ import java.util.ArrayList;
 public class FileOperations {
 	FileOutputStream out;
 	PrintWriter printWriter;
-
-	List<String> readDataFile() {
+/*
+ * Read questions from file
+ */
+	List<String> readDataOfFile() {
 		List<String> data = new ArrayList<String>();
 		FileInputStream fileInputStream;
 		BufferedReader bufferedReader;
@@ -40,14 +42,26 @@ public class FileOperations {
 
 		return data;
 	}
+/*
+ * It will save answers in output file
+ */
+	void answerToOutputFile(List<Answers> answer, int ques, int user) {
 
-	void answerToOutputFile(List<Answers> answer) {
 		try {
 			File f = new File("D:/output.txt");
 			printWriter = new PrintWriter(f);
+			int q = 0;
+			int u = 1;
 			for (int i = 0; i < answer.size(); i++) {
-				printWriter.println("Participant" + (i + 1) + " "
-						+ answer.get(i).getAnswer());
+
+				if (q >= ques) {
+					q = 0;
+					u++;
+				}
+				printWriter.println("Participant" + (u) + " "
+						+ answer.get(i).ansId() + " " + answer.get(i).quesId()
+						+ " " + answer.get(i).getAnswer());
+				q++;
 			}
 
 		} catch (Exception e) {

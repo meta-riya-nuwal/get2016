@@ -2,7 +2,7 @@ package survey;
 
 public class Validations {
 	String validateSingle(String ans, String option) {
-		ReadInput r = new ReadInput();
+		ReadInput read = new ReadInput();
 		int f = 0;
 		String answer = "";
 		String modifiedOptions = option.replace("(", "/").replace(")", "")
@@ -11,6 +11,7 @@ public class Validations {
 
 		for (int i = 0; i < op.length; i++) {
 			if (ans.equals(op[i])) {
+
 				f = 1;
 				return ans;
 
@@ -19,7 +20,7 @@ public class Validations {
 		if (f == 0) {
 			System.out.print("Answer should be choose only from options");
 
-			answer = r.readAnswer();
+			answer = read.readAnswer();
 			validateSingle(answer, option);
 		}
 

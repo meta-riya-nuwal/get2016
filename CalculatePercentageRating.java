@@ -23,7 +23,9 @@ public class CalculatePercentageRating {
 	String getOptions() {
 		return option;
 	}
-
+/*
+ * Calculate percentage of single select answers
+ */
 	void calculatePercent(List<CalculatePercentageRating> singleSelect) {
 
 		String option = singleSelect.get(0).getOptions();

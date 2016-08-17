@@ -1,0 +1,6 @@
+Participant1 1 101 2
+Participant1 2 102 Communication
+Participant1 3 103 good
+Participant2 4 101 4
+Participant2 5 102 Service Quality
+Participant2 6 103 nice

@@ -29,10 +29,10 @@ public class FetchLibrary {
 			ResultSet res = ps.executeQuery();
 
 			while (res.next()) {
-				Title t = new Title();
-				t.setTitleId(res.getString(1));
-				t.setTitleName(res.getString(2));
-				title.add(t);
+				Title titles = new Title();
+				titles.setTitleId(res.getString(1));
+				titles.setTitleName(res.getString(2));
+				title.add(titles);
 			}
 		} catch (SQLException e) {
 			System.out.println("Error in establishing query");

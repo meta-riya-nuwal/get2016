@@ -72,45 +72,27 @@ public class FetchLibrary {
  * It return the number of books that are not issue since last 1 year or not issue in past 
  */
 	int bookDelete() {
-		String query = "select b.accession_no from books as b LEFT JOIN book_issue as bi on b.accession_no=bi.accession_no where TIMESTAMPDIFF(YEAR, bi.issue_dt,CURRENT_TIMESTAMP)>=1 OR bi.issue_dt is NULL";
-		List<Integer> book = new ArrayList<Integer>();
-		/*
-		 * list book add all the book that were to be deleted further
-		 */
-		try {
-			PreparedStatement ps = con.prepareStatement(query);
+	String query=	"delete  from books where books.accession_no not in(select distinct  bi.accession_no from  book_issue as bi where TIMESTAMPDIFF(YEAR, bi.issue_dt,CURRENT_TIMESTAMP)<=1)";
+    int count=0;
 
-			ResultSet res = ps.executeQuery();
-
-			while (res.next()) {
-
-				book.add(res.getInt(1));
-
-			}
-			ps.close();
-			res.close();
-		} catch (SQLException e) {
-			System.out.println("Error in query");
-		}
-		String query1 = "delete from books where accession_no=?";
+		
       /*
-       * deleted all books one by one that are in list book
+       * deleted all books one by one 
        */
 		try {
 
-			PreparedStatement ps1 = con.prepareStatement(query1);
+			PreparedStatement ps1 = con.prepareStatement(query);
 			int j = 1;
-			for (int i = 0; i < book.size(); i++) {
+			
+			
+			 count=ps1.executeUpdate();
 
-				ps1.setInt(j, book.get(i));
-				ps1.executeUpdate();
-
-			}
+			
 			ps1.close();
 		} catch (SQLException e) {
 
 		}
-		return book.size();
+		return count;
 	}
 /*
  * It closes connection 

@@ -1,0 +1,198 @@
+body {
+    
+	border:solid gray 10px;
+	margin:2px;
+	background-color: white;
+	
+}
+.header1{
+	border: solid  #CF760C ;
+	background-color:#D36F5B;
+	padding:20px;
+	color:#BD3922;
+	margin-bottom:0px;
+}
+.heading
+{
+	font-size:25px;
+	color:yellow;
+	font-family:sans-serif;
+}
+.subheading
+{
+	font-size:25px;
+	color:yellow;
+	font-family:sans-serif;
+	
+
+	font-style:Italic;
+	}
+	
+.nav{
+	
+margin-top:0px;
+	background-color:#A06255;
+	padding:5px
+}
+
+	
+.li1{ 
+display: inline; 
+padding: 20px; 
+font-size:20px;
+color:white;
+}
+.menu{
+	margin-top:10px;
+	background-color:#B0A580;
+	margin-left:10px;
+	width:80%;
+	border:solid gray;
+	padding:0px;
+	border:solid gray;
+	border-radius: 10px;
+}
+.block{
+	background-color:#B0A580;
+	margin-top:10px;
+	margin-left:10px;
+	width:60%;
+	padding:30px;
+	border:solid gray;
+	border-radius: 10px;
+}
+.first
+{width:20%;
+	float:left;
+	
+}
+.notes
+{
+	color:#5D3424;
+	font-size:20px;
+	font:bold;
+}
+.menuitem
+{
+	color:white;
+}
+a{
+	text-decoration:none;
+	color:white;
+}
+a:hover { 
+    background-color: gray;
+}
+li
+{
+	list-style-type: none;
+	font-size:15px;
+}
+	
+
+}
+.li2
+{
+	text-decoration:none;
+	color:white;
+	
+}
+.middleText{
+	margin-top:2%;
+	font-size:30px;
+	color:#861A13;
+	
+}
+.mid{
+	width:60%;
+    float:left;
+	
+	}
+.image
+{
+	margin-top:2%;
+	width:30%;
+	
+}
+.text{
+	color:red;
+	font-size:15px;
+	
+}
+.end
+{
+	border-radius: 10px;
+	margin-top:20px;
+	
+	width: 80%;
+	float: left;
+	height:25%;
+	background-color: #B0A580;
+	border:solid gray;
+}
+.search
+{
+	margin-top:5%;
+	margin-left:2px;
+	margin-right:2px;
+	height:20%;
+	border:solid 1px black;
+	background-color: white;
+	padding:2px;
+	border-radius: 10px;
+	
+}
+.ends
+{
+	float: left;
+	
+	
+	width:15%;
+	height:60%;
+}
+.input
+{
+	margin-top:3%;
+	margin-left:2px;
+	margin-right:2px;
+	height:20%;
+	
+	
+	padding:2px;
+	width: 14%;
+}
+.category
+{
+	margin-top:65%;
+	border-radius: 10px;
+	width:80%;
+	height:30%;
+	background-color: #B0A580;
+	border:solid gray;
+}
+.cat{
+	margin-top:5%;
+	margin-left:2px;
+	margin-right:2px;
+	height:20%;
+	border:solid 1px black;
+	background-color: white;
+	padding:2px;
+	border-radius: 10px;
+}
+.archives
+{
+	margin-top:5%;
+	border-radius: 10px;
+	width:80%;
+	height:30%;
+	background-color: #B0A580;
+	border:solid gray;
+}
+.foot
+{
+	margin-top:35%;
+	height:8%;
+	
+	background-color: #B0A580;
+}

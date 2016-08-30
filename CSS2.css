@@ -1,0 +1,45 @@
+#rotate:hover
+{
+	
+	
+	background-color:green;
+	transform: rotate(20deg);
+}
+#rotate{
+	background-color:red;
+}
+#scale{
+	background-color:red;
+}
+#skew{
+	background-color:red;
+}
+#translate
+{
+	background-color:red;
+}
+#scale:hover
+{
+	
+	transform: scale(2,2); 
+	background-color:yellow;
+}
+#skew:hover
+{
+	
+	 transform: skewX(20deg);
+	 transform: skewY(20deg);
+	 background-color:blue;
+}
+#translate:hover
+{
+	
+	 transform: translate(100px,100px);
+	background-color:pink;
+}
+div
+{
+	width:100px;
+	height:100px;
+	margin-top:50px;
+}

@@ -1,0 +1,99 @@
+body
+{
+margin:0;
+background-color:white;
+font-family:verdana
+}
+header
+{
+	padding:3%;
+	font-size:25px;
+	font-weight:bold;
+	color:red;
+}
+section
+{
+	padding:4%;
+	
+	
+}
+.block{
+	width:100%;
+	margin-top:20px;
+	
+}
+.blockheading
+{
+	width:20%;
+	float:left;
+	text-align:right;
+	margin-top:10px;
+	font-family:open-sans
+}
+.blockinput
+{
+	width:70%;
+	margin-left:10px;
+	float:left;
+	margin-top:10px;
+}
+.inputs
+{
+	
+height: 28px;
+width:40%;
+float: left;
+padding-left: 5px;
+border: solid 1px #ccc;
+border-radius: 0px 4px 4px 0px;
+}
+.icons
+{
+padding: 6px 12px;
+font-size: 15px;
+width:20px;
+font-weight: 400;
+line-height: 1;
+color: #555;
+text-align: center;
+background-color: #eee;
+border: 1px solid #ccc;
+border-radius: 4px 0px 0px 4px;
+float: left;
+}
+.iconsBox
+{
+padding: 8px 15px;
+font-size: 15px;
+width:20px;
+font-weight: 400;
+line-height: 1;
+color: #555;
+text-align: center;
+background-color: #eee;
+border: 1px solid #ccc;
+border-radius: 4px 0px 0px 4px;
+float: left;
+}
+.blockarea
+{
+	float:left;
+	width:2%;
+	height:4%;
+	
+	background-color:#bfbfbf;
+}
+input:invalid, textarea:invalid {
+border: 1px solid red;
+}
+.submit
+{
+width:10%;
+height:30px;
+color:white;
+background-color:orange;
+font-size:13px;
+font-family:Corier new,sarif;
+border:1px outset #1d4faf; 
+border-radius:10px;
+}

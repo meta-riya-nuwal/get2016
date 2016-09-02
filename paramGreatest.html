@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>
+		Greatest Among three numbers
+		</title>
+		<script type=text/javascript>
+			
+			
+			var result;
+			function great(a,b,c)
+			{
+			
+			(a>b?a>c?result=a:result=c:b>c?result=b:result=c);
+			document.write("<h3>Greatest among number  " +a+","+b+","+c+ "is</h3>"+result)	
+			}
+			/*
+			Greatest among three numbers by if-else approach
+			*/
+			/*if(a>b)
+			{
+				if(a>c)
+				{
+				result=a;
+				}
+				else
+				{
+				result=c;
+				}
+			}
+			else
+			{
+				if(b>c)
+				{
+				result=b;
+				}
+				else
+				{
+				result=c;
+				}
+			}
+			
+		*/
+		/*
+			Greatest among three numbers by ternary operator
+			*/
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	<form>
+		<h2>Values are :  40 20 30</h2>
+		<input type=button onclick="great(40,20,30);"    value="Find greatest" />
+		</form>
+	</body>
+	
+</html>

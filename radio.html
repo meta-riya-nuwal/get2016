@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>
+		Radio Select
+		</title>
+		<script type=text/javascript>
+		function choose()
+		{
+		
+		var firstRadio=document.getElementsByName("FirstRadio");
+		for(var i=0;i<firstRadio.length;i++)
+		{
+		if(firstRadio[i].checked==true && firstRadio[i].value=='first')
+		{
+		alert("Male");
+		}
+		if(firstRadio[i].checked==true && firstRadio[i].value=='second')
+		{
+		alert("Female");
+		}
+		}
+		
+		
+		var secondRadio=document.getElementsByName("SecondRadio");
+		for(var i=0;i<secondRadio.length;i++)
+		{
+		if(secondRadio[i].checked==true && secondRadio[i].value=='third')
+		{
+		alert("Student");
+		}
+		if(secondRadio[i].checked==true && secondRadio[i].value=='fourth')
+		{
+		alert("Teacher");
+		}
+		}
+		
+		}
+		
+		</script>
+		<body>
+		<h2>Choose your type</h2>
+		Male<input type=radio name=FirstRadio value=first />
+		Female<input type=radio name=FirstRadio value=second />
+		</br>
+		Student<input type=radio name=SecondRadio value=third />
+		Teacher<input type=radio name=SecondRadio value=fourth />
+		</br>
+		<input type=submit value=Choose onclick="choose();"/>
+		</body>
+	</html>

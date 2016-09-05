@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>
+</title>
+<link rel="stylesheet" type="text/css" href="html5.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<script type="text/javascript" src="register.js">
+</script>
+</head>
+<header>
+Registration page
+</header>
+<section>
+	<form method=post>
+		<div class=block>
+			<div class=blockheading>
+			Name
+			</div>
+			<div class=blockinput>
+
+			<div class=icons><span class="fa fa-male"></span></div>
+			<div><input type=text id="name" class=inputs placeholder="Name"    /></div>
+			
+			</div>
+		</div>
+		<div class=block>
+			<div class=blockheading>
+			Address
+			</div>
+			<div class=blockinput>
+			<div class=icons><span class="fa fa-home"></span></div>
+			<div><input type=text id="address" class=inputs placeholder="Address"  /></div>
+			
+			</div>
+		</div>
+		
+		<div class=block>
+			<div class=blockheading>
+			Phone
+			</div>
+			<div class=blockinput>
+			<div class=icons><span class="fa fa-phone"></span></div>
+			<div><input type=text id=number class=inputs placeholder="Phone No."   /></div>
+			
+			</div>
+		</div>
+		<div class=block>
+			<div class=blockheading>
+			Email
+			</div>
+			<div class=blockinput>
+			<div class=icons><span class="fa fa-envelope"></span></div>
+			<div><input type=text id=email class=inputs placeholder="Email Address"    /></div>
+			
+			</div>
+		</div>
+		
+		<div class=block>
+			<div class=blockheading>
+			Gender
+			</div>
+			<div class=blockinput>
+			<div><input type="radio" name=gender value="Male" id="male" />Male</div>
+			<div>
+			<input type="radio" name=gender value="Female" id="female" />Female
+			</div>
+			
+			</div>
+		</div>
+		<div class=block>
+			<div class=blockheading>
+			Highest Qualification
+			</div>
+			<div class=blockinput>
+			<div>
+			<select id=qualify>
+		    <option></option>
+			<option>M.tech</option>
+			<option>B.tech</option>
+			<option>B.Com</option>
+			<option>12</option>
+			</select>
+			</div>
+			
+			
+			</div>
+		</div>
+		<div class=block>
+			<div class=blockheading>
+			Certification
+			</div>
+			<div class=blockinput>
+			<div><input type="checkbox" name=certify  value=Oracle id=oracle/>Oracle</div>
+			<div>
+			<input type="checkbox" name=certify  value=Java id=java/>Java
+			</div>
+			
+			</div>
+		</div>
+		
+		<div class=block>
+			<div class=blockheading>
+			
+			</div>
+			<div class=blockinput>
+			<button class=submit type="submit" onclick="register();">Register <span class="fa fa-paper-plane"></span></button>
+			<div>
+			
+			</div>
+			
+			</div>
+		</div>
+	</form>
+</section>
+</html>

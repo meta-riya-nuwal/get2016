@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>
+		radio Select dropdown show
+		</title>
+		<script type=text/javascript>
+		function choose()
+		{
+		var value;
+		if(document.getElementById('city').checked==true)
+		{
+		alert("Select City");
+		value = document.getElementById("First").value;
+		alert(value);
+		}
+		if(document.getElementById('caste').checked==true)
+		{
+		alert("Select Caste");
+		value = document.getElementById("Second").value;
+		alert(value);
+		}
+		
+		
+		
+		}
+		
+		</script>
+		<body>
+		<h2>Choose your type</h2>
+		<select id="First">
+		<option>Delhi</option>
+		<option>Mumbai</option>
+		<option>Jaipur</option>
+		<option>Pune</option>
+		</select>
+		<select id="Second">
+		<option>Hindu</option>
+		<option>Muslim</option>
+		<option>Sikh</option>
+		<option>Jain</option>
+		</select>
+		</br>
+		</br>
+		ChooseCity<input type=radio name=FirstRadio value=city id="city" />
+		ChooseCaste<input type=radio name=FirstRadio value=caste id="caste" />
+		
+		<input type=submit value=Choose onclick="choose();"/>
+		</body>
+	</html>

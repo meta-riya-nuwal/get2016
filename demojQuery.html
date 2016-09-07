@@ -1,0 +1,43 @@
+
+
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	</script>
+	<script>
+	$(document).ready(init);
+	function init()
+	{
+	$("#button").click(function(){
+	var buton=$('#button').html();
+	
+	if(buton=='Hide')
+	{
+    $("span").hide();
+	$('#button').html('show');
+	}
+	else
+	{
+	$("span").show();
+	$('#button').html('Hide');
+	}
+    });
+	}
+	
+	</script>
+	<style>
+	#button
+	{
+	position:fixed;
+	top:50px;
+	left:10px;
+	}
+	</style>
+	</head>
+	<body>
+	<div><span id="span">Welcome</span></div>
+	<button type="button" id="button">Hide</button>
+	</body>
+</html>
+

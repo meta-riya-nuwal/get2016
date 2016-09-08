@@ -1,0 +1,34 @@
+{
+    "Riya" : {
+        "name" : "Riya",
+        "email" : "riya.nuwal@gmail.com",
+        "dob" : "14/02/1990",
+        "address" : "Bhilwara"
+    },
+    
+    "Astha" : {
+        "name" : "Astha",
+        "email" : "astha@gmIL.COM",
+        "dob" : "11/10/1986",
+        "address" : "Laxmi Ratan Nagar"
+    },
+    
+    "Amita" : {
+        "name" : "Amita",
+        "email" : "AMITA@GMAIL.COM",
+        "dob" : "25/12/1995",
+        "address" : "Frontier Colony"
+    },
+	"Jyoti" : {
+        "name" : "Jyoti",
+        "email" : "JYOTI@example.com",
+        "dob" : "25/12/1995",
+        "address" : "Frontier Colony"
+    },
+	"Ayushi" : {
+        "name" : "Ayushi",
+        "email" : "AYUSHI@example.com",
+        "dob" : "25/12/1995",
+        "address" : "Frontier Colony"
+    }
+}
